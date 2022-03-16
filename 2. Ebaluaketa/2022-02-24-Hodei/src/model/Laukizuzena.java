@@ -12,7 +12,7 @@ import java.util.Arrays;
  *
  * @author olivas.hodei
  */
-public class Laukizuzena implements Marrazgarria {
+public class Laukizuzena extends Puntua implements Marrazgarria {
 
     private Puntua erpinBat;
     private Puntua kontrakoErpina;
@@ -42,15 +42,19 @@ public class Laukizuzena implements Marrazgarria {
         erpinak[2] = kontrakoErpina;
         erpinak[3] = new Puntua(erpinBat.getX(), kontrakoErpina.getY());
         return erpinak;
-       
+
     }
-
- //   public ArrayList<Puntua> getLauErpinenArrayLista() {
- //  ArrayList <Puntua> erpinak = new ArrayList
-       //   erpinak.add(new Puntua(erpinBat));
-       // return null;
-   // }
-
+public ArrayList<Puntua> getLauErpinenArrayLista() {
+            ArrayList arraya = new ArrayList<Puntua>();
+            
+            arraya.add(this.getErpinBat());
+            arraya.add(new Puntua(this.getKontrakoErpina().getX(),this.getErpinBat().getY()));
+            arraya.add(this.getKontrakoErpina());
+            arraya.add(new Puntua(this.getErpinBat().getX(), this.getKontrakoErpina().getY()));
+            
+            return arraya;
+}
+  
     @Override
     public String toString() {
         return Arrays.toString(getLauErpinenArraya());
@@ -58,7 +62,25 @@ public class Laukizuzena implements Marrazgarria {
 
     @Override
     public void marraztu() {
-  
+
+    }
+
+    public boolean isInside(Puntua puntuBat) {
+        
+        boolean barruan = false;
+        
+        if((puntuBat.getX()>= erpinBat.getX() && puntuBat.getX()<= kontrakoErpina.getX())&&(puntuBat.getY()>= erpinBat.getY() && puntuBat.getY()<= kontrakoErpina.getY()) ){
+        
+        barruan = true;
+        }
+        
+        
+        
+        
+        
+        return false;
+        
+
     }
 
 }
