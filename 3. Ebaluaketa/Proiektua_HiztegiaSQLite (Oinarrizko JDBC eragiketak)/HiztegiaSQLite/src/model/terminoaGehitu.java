@@ -44,6 +44,9 @@ public class terminoaGehitu {
      * @param capacity
      */
     public void insert( String euskaraz, String gazteleraz) {
+       
+        String sql2 = "SELECT * FROM Terminoak WHERE euskaraz=? AND gazteleraz=?";
+        
         String sql = "INSERT INTO Terminoak(euskaraz,gazteleraz) VALUES(?,?)";
 
         try (Connection conn = this.connect();
@@ -63,7 +66,9 @@ public class terminoaGehitu {
 
         terminoaGehitu app = new terminoaGehitu();
         // insert three new rows
-        app.insert("Laranja", "Naranja");
+        
+      
+          app.insert("Ura", "Agua");
        // app.insert(5, "Eguzkia", "Sol");
         //app.insert(6, "Arraina", "Pez");
     }

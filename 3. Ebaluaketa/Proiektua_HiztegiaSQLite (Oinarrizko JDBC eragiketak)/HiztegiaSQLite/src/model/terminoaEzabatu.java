@@ -64,7 +64,7 @@ public class terminoaEzabatu {
     public static void main(String[] args) {
        terminoaEzabatu app = new terminoaEzabatu();
         // delete the row with id 3
-        app.delete(10);
+        app.delete(12);
     }
 
 }

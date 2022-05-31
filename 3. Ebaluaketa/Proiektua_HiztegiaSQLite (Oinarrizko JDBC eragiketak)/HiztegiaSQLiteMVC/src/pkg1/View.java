@@ -27,9 +27,7 @@ public class View extends javax.swing.JFrame {
         return v;
     }
 
-    View(View2 aThis, boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -47,7 +45,6 @@ public class View extends javax.swing.JFrame {
         jTextFieldsartutakohitzaGaz = new javax.swing.JTextField();
         jButtonIrten = new javax.swing.JButton();
         jButtonBidali = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -92,13 +89,6 @@ public class View extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("2 panela");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -127,10 +117,8 @@ public class View extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jTextFieldsartutakoHitzaEus, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jTextFieldsartutakohitzaGaz, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButtonIrten, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(52, 52, 52)
-                        .addComponent(jButton1)))
-                .addContainerGap(90, Short.MAX_VALUE))
+                            .addComponent(jButtonIrten, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(215, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,9 +136,8 @@ public class View extends javax.swing.JFrame {
                 .addGap(68, 68, 68)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonIrten)
-                    .addComponent(jButtonBidali)
-                    .addComponent(jButton1))
-                .addContainerGap(109, Short.MAX_VALUE))
+                    .addComponent(jButtonBidali))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
 
         pack();
@@ -171,11 +158,6 @@ public class View extends javax.swing.JFrame {
     private void jButtonBidaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBidaliActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonBidaliActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       View2 view = new View2(this,true);
-       view.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -216,7 +198,6 @@ public class View extends javax.swing.JFrame {
  //   }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     javax.swing.JButton jButtonBidali;
     private javax.swing.JButton jButtonIrten;
     private javax.swing.JLabel jLabel2;
